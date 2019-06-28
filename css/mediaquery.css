@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+
+@media(max-width:420px){
+    .progress {
+        display:none;
+    }
+    .titleimgrow{
+        display:none;
+    }
+    .heading{
+        margin-top:200px;
+        font-size: 5rem;
+        text-align: center;
+    }
+    
+    .headerbtn{
+        margin-bottom:10px;
+    }
+    .sbtn{
+        display:none;
+    }
+    .title{
+        font-size:5rem;
+    }
+    .title-question{
+        font-size: 4rem;
+    }
+    #avengers,#ultron,#infinity,#questionnaire {
+        padding-right:20px;
+        padding-left:20px;
+        margin:0;
+    }
+    .infinity{
+        height:700px;
+        padding-top:70px;
+    }
+    .infinityImg{
+        background-position: center;
+    }
+    .title-infinity, .description-infinity:nth-of-type(1){
+        display:block;
+    }
+    .word{
+        display: none;
+    }
+    .movieWrapper{
+        display: none;
+    }
+    .icon {
+        display:block;
+    }
+    .richSlideshow{
+        display:none;
+    }
+    .footer{
+        height:40px;
+    }
+    .footer-description{
+        line-height: 40px;
+    }
+    .footerimg{
+       display:none;
+    }
+}

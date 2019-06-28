@@ -1,0 +1,336 @@
+<!--主な制作期間２月７日〜２月１3日
+実装した機能やレイアウト
+BootStrap利用、１カラムレイアウト、プログレスバー、背景動画、背景固定、ボタンによるスクロール、ボタンホバーによる変化、スティッキーヘッダー、スムーズスクロール、スライドショー（２種）、
+Dateオブジェクトの利用、動画の埋め込み、フォーム、レスポンシブ、ホバー時の背景ズーム（追加2/15）
+６月１９日追加
+エンドゲームのセクションにパララックスを追加、デザインを変更
+-->
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/trial02.ver2.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+
+    <title>AVENGERS</title>
+
+  </head>
+
+  <body>
+    <!--プログレスバー-->
+    <div class="progress" id="progress">
+      <span class="progress-loading">Loading...</span>
+      <span class="progress-bar"></span>
+      <span class="progress-text">0%</span>
+      <img src="https://img.gifmagazine.net/gifmagazine/images/2684856/original.gif" alt="" class="gif">
+    </div>
+    <!--背景動画用div-->
+    <div class="wrapper" id="wrapper">
+    <!--ヘッダー-->
+    <header class="header" id="header">
+      <div clss="row">
+        <div class="col col-sm titleimgrow">
+          <img class="titleimg" src="" alt="タイトル">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+          <h1 class="heading typo" id="heading">AVENGERS</h1>
+        </div>
+        <div class="col-sm"></div>
+      </div>
+      <div class="row headingBorderWrapper">
+        <div class="col-sm">
+          <div class="headingBorder">
+          <div class="colorBorder"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <a href="#avengers" class="btn btn-primary btn-lg headerbtn" role="button"  id="btn1">Avengers</a>
+        </div>
+        <div class="col-sm-3">
+          <a href="#ultron" class="btn btn-danger btn-lg headerbtn" role="button" id="btn2">Age of Ultron</a>
+        </div>
+        <div class="col-sm-3">
+          <a href="#infinity" class="btn btn-warning btn-lg headerbtn" role="button"  id="btn3" style="color:#fff">Infinity War</a>
+        </div>
+        <div class="col-sm-3">
+          <a href="#end" class="btn btn-secondary btn-lg headerbtn" role="button" id="btn4">End Game</a>
+        </div> 
+      </div>
+    </header>
+
+    <!--スティッキーヘッダ-->
+    <div class="row sheader">
+      <div class="col-sm-12">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+          <a href="#header" class="navbar-brand sheaderbtn" id="sbtn0"><img src="img/avengerslogo1.jpg" alt="ロゴ" class="logo"></a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav nav-jusified navlist">
+              <li class="nav-item li"><a href="#avengers" class="nav-link nav-av sheaderbtn active" id="sbtn1">Avngers</a></li>
+              <li class="nav-item li"><a href="#ultron" class="nav-link nav-ul sheaderbtn" id="sbtn2">Age of Ultron</a></li>
+              <li class="nav-item li"><a href="#infinity" class="nav-link nav-war sheaderbtn" id="sbtn3">Infinity War</a></li>
+              <li class="nav-item li"><a href="#end" class="nav-link nav-end sheaderbtn" id="sbtn4">End Game</a></li>
+            </ul>
+          </div>
+          <span class="navbar-toggler-icon text-right icon"></span>
+        </nav>
+      </div>
+    </div>
+    <!--各作品セクション-->
+    <!--アベンジャーズ-->
+    <section  class="avengers"  id="avengers">
+      <div class="row avengersSection">
+        <div class="col-sm-6">
+          <div class="row workdescription">
+            <div class="col-sm">
+              <!--タイトル-->
+              <h1 class="title title-avengers typo ml-5" id="title1">AVENGERS</h1>
+            </div>
+          </div>
+          <div class="row workdescription">
+            <div class="col-sm">
+              <!--説明-->
+              <p class="description ml-5">
+                  『アベンジャーズ』（Marvel's The Avengers〉は、マーベル・スタジオ製作、ウォルト・ディズニー・スタジオ・モーション・ピクチャーズ配給で公開された2012年のアメリカ合衆国の映画。アメリカン・コミックヒーローのクロスオーバー作品である。<br>
+                  複数のヒーロー映画のクロスオーバー作品であり、それら全ての作品を同一の世界観として扱う『マーベル・シネマティック・ユニバース』シリーズに属する作品に当たる。その作品群の中では第6作品目の映画であり、その「フェイズ1（第1シーズン）」のクライマックスを飾る作品でもある。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <!--スライドショー-->
+          <div class="slideshow">
+            <img src="img/avengers1.jpg" alt="スライド" class="slid">
+            <img src="img/avengers2.jpg" alt="スライド" class="slid">
+            <img src="img/avengers3.jpg" alt="スライド" class="slid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--ウルトロン-->
+    <section class="ultron" id="ultron">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="row workdescription">
+            <!--タイトル-->
+            <div class="col-sm">
+              <h1 class="title title-ultron typo ml-5" id="title2">AGE of Ultron</h1>
+            </div>
+          </div>
+          <div class="row">
+            <!--説明-->
+            <div class="col-sm">
+              <p class="description workdescription ml-5">
+                  『アベンジャーズ/エイジ・オブ・ウルトロン』（Avengers: Age of Ultron）は、マーベル・スタジオが製作、ウォルト・ディズニー・スタジオ・モーション・ピクチャーズが配給するアメリカ合衆国のスーパーヒーロー映画である。<br>
+                  「マーベル・コミック」のスーパーヒーローチームである『アベンジャーズ』をフィーチャーした、2012年の映画『アベンジャーズ』の続編で、様々な「マーベル・コミック」の実写映画を、同一の世界観のクロスオーバー作品として扱う『マーベル・シネマティック・ユニバース』シリーズとしては第11作品目の映画である。<br>
+                  前作と同じく、再び各作品のヒーローらが集結し共闘する。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--スライドショー２-->
+        <div class="col-sm-6">
+          <div class="richSlideshow">
+            <div class="slideshow-slides">
+              <a href="" class="rslide"><img src="img/ultron1.jpg" alt="ウルトロン１" width="600" height="465"></a>
+              <a href="" class="rslide"><img src="img/ultron2.jpg" alt="ウルトロン２" width="600" height="465"></a>
+              <a href="" class="rslide"><img src="img/ultron3.jpg" alt="ウルトロン３" width="600" height="465"></a>
+            </div>
+            <div class="slideshow-nav">
+              <a href="#" class="prev">Prev</a>
+              <a href="#" class="next">Next</a>
+            </div>
+            <div class="slideshow-indicator"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--インフィニティウォー-->
+    <section class="infinity" id="infinity">
+        <div class="infinityImg" id="infinityImg"></div>
+        <div class="infinityContents">
+            <div class="row titlewrapper">
+                <div class="col">
+                <h1 class="title title-infinity typo" id="title3">Infinity War</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 description-infinities">
+                <p class="description description-infinity">
+                    『アベンジャーズ/インフィニティ・ウォー』（Avengers: Infinity War）は、2018年のアメリカ合衆国のスーパーヒーロー映画。<br>
+                    製作はマーベル・スタジオ、配給はウォルト・ディズニー・スタジオ・モーション・ピクチャーズ。アメリカン・コミックのマーベル・コミック『アベンジャーズ』の実写映画シリーズ第3作。<br>
+                    また、様々なマーベル・コミックの実写映画を、同一の世界観のクロスオーバー作品として扱う『マーベル・シネマティック・ユニバース』（MCU）シリーズとしては第19作品目の映画である。
+                </p>
+                <p class="description description-infinity">
+                    当初MCUシリーズの「フェイズ3」のロードマップが発表された時点では、次作の『アベンジャーズ4（仮題）』と共に『Avengers: Infinity War Part1』『Avengers: Infinity War Part2』の2部作構成とされていたが、それぞれの作品の独立性が高いとの理由から別のタイトルとなり「Part1」表記が削除された。<br>
+                    マーベルが1990年代に刊行した「インフィニティ」三部作の第一部『インフィニティ・ガントレット』とストーリー的な関連があることが指摘されている[5]。また本作のサブタイトルは三部作の第二部『インフィニティ・ウォー』と共通である。<br>
+                    予告編は2017年11月30日に初めてネット上に公開され、公開後24時間以内の再生回数が2億3000万回に到達し、『IT/イット “それ”が見えたら、終わり。』の記録（1億9700万回）を抜いて歴代最高記録を更新した
+                </p>
+                <p class="description description-infinity">
+                    新天地として地球を目指すアスガルドの避難船ステイツマンがサノスに襲撃された。辛うじてヘイムダルがハルクを地球に逃がすもソーたちは全滅、ロキが隠し持っていた四次元キューブからスペース・ストーンが奪われる。<br>
+                    パワー・ストーンと合わせ2つのインフィニティ・ストーンを入手したサノスは、ロキをも殺し船を破壊すると残る4つのストーンを求めて消え去る...。
+                </p>
+                </div>
+                <div class="col-sm-2">
+                    <img src="img/word1.png" class="word">
+                </div>
+            </div>
+        </div>
+              
+    </section>
+    <!--エンドゲーム-->
+    <section class="end" id="end">
+      <div class="row rellax" data-rellax-speed="-3">
+        <div class="col-sm">
+          <h1 class="title title-end typo" id="title4">End Game</h1>
+          <h2 class="day-description">公開後<span class="day"></span>日<small>*公開前作成時は「公開まであと○日」</small></h2>
+        </div>
+      </div>
+      <div class="row rellax gullery">
+        <p class="click rellax" data-rellax-speed="2">click here!</p>
+        <img src="img/para1.jpg" alt="" class="para-img para1 rellax" data-rellax-speed="2" id="ironman">
+        <img src="img/para2.jpg" alt="" class="para-img para2 rellax" data-rellax-speed="7" id="captain">
+        <img src="img/para3.jpg" alt="" class="para-img para3 rellax" data-rellax-speed="6" id="thor">
+        <img src="img/para4.jpg" alt="" class="para-img para4 rellax" data-rellax-speed="3">
+        <img src="img/para5.jpg" alt="" class="para-img para5 rellax" data-rellax-speed="-1">
+        <img src="img/para6.jpg" alt="" class="para-img para6 rellax" data-rellax-speed="10">
+      </div>
+      <div class="characters rellax">
+        <div class="chara ironman">
+          <h2 class="chara__name">アイアンマン</h2>
+          <h3 class="chara__heading">最新鋭のパワードスーツで戦うセレブヒーロー</h3>
+          <p class="chara__info">
+              億万長者の起業家、トニー・スタークが洗練されたアーマーを装着したとき、彼は生きたハイテク・ウェポン、世界最高の戦闘兵器と化す。<br>
+              トニーは超現代的な発明を持って、最先端の戦いにその身を投じ、不可能な音速飛行も可能にし、よりよきものを守り続けた。彼こそがアーマード・アベンジャー。<br>
+              一部機械化した心臓が彼を突き動かす、この全身ヒーローを！彼こそがインビンシブル(無敵の)アイアンマン！
+          </p>
+          <img src="img/chara1.jpg" alt="" class="chara__img">
+        </div>
+        <div class="chara captain">
+            <h2 class="chara__name">キャプテン・アメリカ</h2>
+            <h3 class="chara__heading">永い眠りから覚めた正義に生きる伝説のソルジャー</h3>
+            <p class="chara__info">
+                第2次世界大戦中、愛国心の強いスティーブ・ロジャースは軍の最高機密生体実験、オペレーション：リバースに己の身を捧げた。<br>
+                実験段階の超血清を注入されたロジャースは耐久力、腕力そして反応速度が高められた状態となった。<br>
+                さらに訓練と破壊不能なヴィブラニウムのシールドを持って、ロジャースはほどなく国家究極の武器、キャプテン・アメリカとなった！<br>
+                第2次大戦末期、終戦も近い頃に一度氷の中に閉じ込められるも、何十年も後に発見され、蘇生された。<br>
+                生ける伝説は悪との戦いを今も続ける、アベンジャーズの一員として！
+            </p>
+            <img src="img/chara2.jpg" alt="" class="chara__img">
+          </div>
+          <div class="chara thor">
+              <h2 class="chara__name">ソー</h2>
+              <h3 class="chara__heading">雷のパワーを操る破天荒な神様</h3>
+              <p class="chara__info">
+                  北欧の伝説には、オーディンの息子、アスガルドの玉座を継ぐものを語る物語がある。<br>
+                  その神こそソー、神話最強のヒーロー！　ソーの腕力、耐久力そして、戦いへの飽くなき冒険心はアスガルドのどの同胞よりも強い。<br>
+                  強大なソーは魔力を宿したウルのハンマー、ムジョルニアを振るい、雷と稲妻を自在に操る。
+              </p>
+              <img src="img/chara3.jpg" alt="" class="chara__img">
+            </div>
+      </div>
+      <div class="row movieWrapper rellax" data-rellax-speed="6">
+        <div class="col-sm">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="movie embed-responsive-item"  src="https://www.youtube.com/embed/KunCDzXlXLI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--アンケート-->
+    <section class="questionnaire" id="questionnaire">
+      <form action="#" method="post">
+        <div class="form-row radiobtn">
+          <div class="col-sm"></div>
+          <div class="col-sm-4">
+            <h1 class="title title-question typo" id="title5">Questionnaire</h1>
+            <p class="question">あなたはどの作品が最も好きですか?</p>
+            <div class="custom-control custom-radio form-group">
+              <input class="custom-control-input" type="radio" id="option1" name="radio">
+              <label for="option1" class="custom-control-label">アベンジャーズ</label>
+            </div>
+            <div class="custom-control custom-radio form-group">
+              <input class="custom-control-input" type="radio" id="option2" name="radio">
+              <label for="option2" class="custom-control-label">エイジオブウルトロン</label>
+            </div>
+            <div class="custom-control custom-radio form-group">
+              <input class="custom-control-input" type="radio" id="option3" name="radio">            
+              <label for="option3" class="custom-control-label">インフィニティウォー</label>
+            </div>
+            <div class="custom-control custom-radio form-group">
+              <input class="custom-control-input" type="radio" id="option4" name="radio">
+              <label for="option4" class="custom-control-label">エンドゲーム</label>
+            </div>
+        </div>
+        <div class="col-sm"></div>
+      </div>
+
+        <div class="form-row select">
+          <div class="col-sm"></div>
+          <div class="col-sm-4 form-group">
+            <p class="question">あなたはどのキャラクターが好きですか?</p>
+            <select class="custom-select"  name="select" id="select">
+              <option selected>選択してください</option>
+              <option value="1">キャプテン・アメリカ</option>
+              <option value="2">アイアンマン</option>
+              <option value="3">マイティ・ソー</option>
+              <option value="4">ハルク</option>
+              <option value="5">ブラックウィドウ</option>
+              <option value="6">ホークアイ</option>
+              <option value="7">スカーレット・ウィッチ</option>
+              <option value="8">ヴィジョン</option>
+              <option value="9">ウォーマシン</option>
+              <option value="10">スパイダーマン</option>
+            </select>
+          </div>
+          <div class="col-sm"></div>
+        </div>
+        <div class="form-row textform">
+          <div class="col-sm"></div>
+          <div class="col-sm-4 form-group">
+            <textarea class="form-controm txtearea" name="text" id="text" cols="40" rows="10" placeholder="映画の感想・サイトへのご意見などご自由にお書きください"></textarea>
+          </div>
+          <div class="col-sm"></div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm"></div>
+          <div class="col-sm-4 form-group">
+            <input class="btn  btn-info  submitbtn" type="submit" value="送信"> 
+          </div>
+          <div class="col-sm"></div>
+        </div>
+      </form>
+    </section>
+    <footer class="footer">
+        <div class="row">
+          <div class="col col-sm-2">
+              <img src="img/marvel1.png" alt="marvel" class="footerimg">
+          </div>
+          <div class="col col-sm-8">
+            <p class="footer-description">©️ Marvel</p>
+          </div>
+            <div class="col col-sm-2"></div>
+          </div>
+    </footer>
+  </div>
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/rellax.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.tubular.1.0.js"></script>
+    <script src="js/jquery.typoshadow.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/trial02.ver2.js"></script>
+  </body>
+</html>
